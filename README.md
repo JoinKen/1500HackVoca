@@ -13,11 +13,17 @@ khi nhập dữ liệu vào textbox thứ n trong đoạn văn -> dựa vào t�
 - part 2: các màu thể hiện loại từ sẽ được fixed, phân trang mỗi trang hiển thị 8 từ, phân trang gồm pre and next, button chuyển phần tiếp theo nằm ở trang cuối cùng
 - gộp home + proccessing = my proccess; thay messeage thành my topic
 - part 3: button proccess chuyển tới trang proccess sau khi hoàn thành part 3
+
+
 ****UX
 - part 3: khi hoàn thành thông báo topic được lưu ở đâu
 - part3: Khi ngta đã dùng từ vựng cho topic của mình thì từ vựng mất đi
+
+
 ****Backend
 - indexOf(String st) duyệt phần tử tồn tại trong chuỗi
+
+
 ****CSDL
 - tạo các HQTCSDL(storeproceduce, function, view,...)
 - image: Mysql và audio: project source
