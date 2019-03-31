@@ -1,5 +1,9 @@
 # 1500HackVoca
-Project Thiết kế phần mềm hướng giáo dục. Java spring
+- Project Thiết kế phần mềm hướng giáo dục. 
+- Java spring boot
+- Git: Source tree
+- MySQL
+
 # Tài nguyên dự án: https://drive.google.com/drive/folders/1UvPoga3bvIU3vUcCg9zgUqzF0G8kbf3u?usp=sharing
 
 # Link
