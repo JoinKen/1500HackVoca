@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <link rel="shortcut icon" href="%PUBLIC_URL%/favicon.ico" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="theme-color" content="#000000" />
+  <!--
+      manifest.json provides metadata used when your web app is installed on a
+      user's mobile device or desktop. See https://developers.google.com/web/fundamentals/web-app-manifest/
+    -->
+  <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
+  <!--
+      Notice the use of %PUBLIC_URL% in the tags above.
+      It will be replaced with the URL of the `public` folder during the build.
+      Only files inside the `public` folder can be referenced from the HTML.
+
+      Unlike "/favicon.ico" or "favicon.ico", "%PUBLIC_URL%/favicon.ico" will
+      work correctly both with client-side routing and a non-root public URL.
+      Learn how to configure a non-root public URL by running `npm run build`.
+    -->
+  <title>Hack não 1500 từ</title>
+  <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport" />
+  <meta name="viewport" content="width=device-width" />
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
+    integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+  <!-- index page -->
+  <link href="%PUBLIC_URL%/index/css/bootstrap.css" rel="stylesheet" />
+
+  <link href="%PUBLIC_URL%/index/css/pe-icon-7-stroke.css" rel="stylesheet" />
+  <link href="%PUBLIC_URL%/index/css/ct-navbar.css" rel="stylesheet" />
+  <link href="%PUBLIC_URL%/index/css/musicplay.css" rel="stylesheet" />
+
+  <!-- end -->
+  <link rel="apple-touch-icon" sizes="76x76" href="%PUBLIC_URL%/assets/img/apple-icon.png" />
+  <link rel="icon" type="image/png" href="%PUBLIC_URL%/assets/img/favicon.png" />
+
+  <!--     Fonts and icons     -->
+  <link rel="stylesheet" type="text/css"
+    href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Roboto+Slab:400,700|Material+Icons" />
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css" />
+
+  <!-- CSS Files -->
+  <link href="%PUBLIC_URL%/assets/css/bootstrap.min.css" rel="stylesheet" />
+  <link href="%PUBLIC_URL%/assets/css/material-bootstrap-wizard.css" rel="stylesheet" />
+
+  <!-- CSS Just for demo purpose, don't include it in your project -->
+  <link href="%PUBLIC_URL%/assets/css/demo.css" rel="stylesheet" />
+  <link href="%PUBLIC_URL%/assets/css/voca-style.css" rel="stylesheet" />
+  <link href="%PUBLIC_URL%/assets/css/hipster_cards.css" rel="stylesheet" />
+  <link href="%PUBLIC_URL%/assets/css/pe-icon-7-stroke.css" rel="stylesheet" />
+  <link href="%PUBLIC_URL%/presentation-assets/css/demo.css" rel="stylesheet" />
+
+  <!-- index page -->
+  <style>
+    .fa-heart {
+      color: #F74933;
+    }
+
+    .space-100 {
+      height: 100px;
+      display: block;
+    }
+
+    pre.prettyprint {
+      background-color: #ffffff;
+      border: 1px solid #999;
+      margin-top: 20px;
+      padding: 20px;
+      text-align: left;
+    }
+
+    .atv,
+    .str {
+      color: #05AE0E;
+    }
+
+    .tag,
+    .pln,
+    .kwd {
+      color: #3472F7;
+    }
+
+    .atn {
+      color: #2C93FF;
+    }
+
+    .pln {
+      color: #333;
+    }
+
+    .com {
+      color: #999;
+    }
+  </style>
+</head>
+
+<body>
+  <noscript>You need to enable JavaScript to run this app.</noscript>
+  <div id="root"></div>
+  <!--
+      This HTML file is a template.
+      If you open it directly in the browser, you will see an empty page.
+
+      You can add webfonts, meta tags, or analytics to this file.
+      The build step will place the bundled scripts into the <body> tag.
+
+      To begin the development, run `npm start` or `yarn start`.
+      To create a production bundle, use `npm run build` or `yarn build`.
+    -->
+  <script src="%PUBLIC_URL%/assets/js/jquery-2.2.4.min.js" type="text/javascript"></script>
+  <script src="%PUBLIC_URL%/assets/js/bootstrap.min.js" type="text/javascript"></script>
+  <script src="%PUBLIC_URL%/assets/js/jquery.bootstrap.js" type="text/javascript"></script>
+
+  <!--  Plugin for the Wizard -->
+  <script src="%PUBLIC_URL%/assets/js/material-bootstrap-wizard.js"></script>
+
+  <!--  More information about jquery.validate here: http://jqueryvalidation.org/	 -->
+  <script src="%PUBLIC_URL%/assets/js/jquery.validate.min.js"></script>
+
+  <!-- index page -->
+  <!-- <script src="./index/js/jquery-1.10.2.js" type="text/javascript"></script> -->
+  <script src="%PUBLIC_URL%/index/js/ct-navbar.js"></script>
+  <script src="%PUBLIC_URL%/index/js/musicplay.js"></script>
+
+  <script src="%PUBLIC_URL%/assets/js/hipster-cards.js"></script>
+
+  <!-- end index -->
+  <script href="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script href="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.3.1.min.js"></script>
+
+  <script href="https://cdnjs.cloudflare.com/ajax/libs/masonry/3.3.1/masonry.pkgd.min.js"></script>
+  <script href="./presentation-assets/js/demo.js"></script>
+
+  <script>
+    $(document).ready(function () {
+      $(".input-part1").change(function () {
+        if ($(this).val().toString() == "RainbowDash") {
+          $(this).css("border-color", "green");
+          $("#checkboxOne").attr("checked", "checked");
+          $(this).css("background-color", "rgba(255, 255, 255)");
+        }
+        else {
+          $(this).css("background-color", "rgba(255, 0, 0, 0.521)");
+          console.log($(this).text().toString());
+          $("#checkboxOne").attr("checked", "unchecked");
+        }
+
+      });
+    });
+  </script>
+  <script>
+    $().ready(function () {
+      var $container = $('.masonry-container');
+      doc_width = $(document).width();
+      if (doc_width >= 768) {
+        $container.masonry({
+          itemSelector: '.card-box',
+          columnWidth: '.card-box',
+          transitionDuration: 0
+        });
+      } else {
+        $('.mas-container').removeClass('mas-container').addClass('row');
+      }
+    });
+  </script>
+</body>
+
+</html>
