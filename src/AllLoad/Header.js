@@ -3,8 +3,8 @@ import React, { Component } from 'react';
 class Header extends Component {
     render() {
         return (
-<div>           
-      <div id="navbar-full">
+            <div>
+                <div id="navbar-full">
                     <div id="navbar">
                         {/*    
             navbar-default can be changed with navbar-ct-blue navbar-ct-azzure navbar-ct-red navbar-ct-green navbar-ct-orange  
@@ -89,7 +89,7 @@ class Header extends Component {
                             </div>
                             <div className="btn_navigation" style={{ paddingLeft: '85px' }}>
                                 <ul className="col-lg-12 col-xs-12 col-md-12 col-sm-12 pull-center">
-                                   <li><button class="navagation btn btn-success voca-style">MY PROCESS</button></li>
+                                    <li><button class="navagation btn btn-success voca-style">MY PROCESS</button></li>
                                     <li><button class="navagation btn btn-danger voca-style">MY VOCABOLARY</button></li>
                                     <li><button class="navagation btn btn-primary voca-style">MY TOPIC</button></li>
                                     <li><button class="navagation btn btn-secondary voca-style">ABOUT US</button></li>
@@ -99,7 +99,7 @@ class Header extends Component {
                     </div>
                     {/*  end navbar */}
                 </div>
-               
+
             </div>
         );
     }
