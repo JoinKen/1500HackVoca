@@ -1,16 +1,15 @@
 import React, { Component } from 'react';
+import TitleUnit from "./ParticeLearn/TitleUnit";
+import VocaCheck from "./ParticeLearn/VocaCheck";
 
 class PracticeLearn extends Component {
+
     render() {
         return (
             <div>
-      <div className="panel panel-default">
+                <div className="panel panel-default">
                     <div className="panel-heading" role="tab" id="headingTwo">
-                        <h4 className="panel-title">
-                            <a className role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo" aria-expanded="true" aria-controls="collapseTwo">
-                                PRACTICE: UNIT 1 COMMUNICATION
-            </a>
-                        </h4>
+                        <TitleUnit />
                     </div>
                     <div id="collapseTwo" className="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingTwo" aria-expanded="true" style={{}}>
                         <div className="panel-body col-md-12 col-xs-12 col-sm-12 col-lg-12">
@@ -18,10 +17,8 @@ class PracticeLearn extends Component {
                             <div className="container check_box col-md-2 col-xs-2 col-sm-2 col-lg-2 ">
                                 <ul className="list ks-cboxtags">
                                     <div className="list_text">
-                                        <li>
-                                            <input type="checkbox" id="checkboxOne" defaultValue="Rainbow Dash" />
-                                            <label htmlFor="checkboxOne">Rainbow Dash</label>
-                                        </li>
+                                        <VocaCheck />
+
                                         <li>
                                             <input type="checkbox" id="checkboxTwo" defaultValue="Cotton Candy" defaultChecked />
                                             <label htmlFor="checkboxTwo">Cotton Candy</label>
@@ -70,10 +67,10 @@ class PracticeLearn extends Component {
                                     </div>
                                     <div className="col-md-10">
                                         <p>Lorem ipsum sit amet orem ipsum sit ametorem ipsum sit ametorem ipsum sit
-                    ametorem ipsum sit ametorem ipsum sit amet <input type="text" name id className="input-part1" />,
-                                            adipisicing elit.
-                                            Dolores atque maxime
-                    voluptate</p>
+                                            ametorem ipsum sit ametorem ipsum sit amet <input type="text" name id className="input-part1" />,
+                                                                    adipisicing elit.
+                                                                    Dolores atque maxime
+                                                voluptate</p>
                                     </div>
                                     <div className="col-md-2">
                                         <p className="actor-part1">Name:</p>
@@ -82,69 +79,76 @@ class PracticeLearn extends Component {
                                         <p>Lorem ipsum sit amet <span className="voca-part1">admin</span>, adipisicing
                                           elit.
                                           Dolores atque maxime
-                    voluptate <input type="text" name id className="input-part1" /></p>
+                                            voluptate <input type="text" name id className="input-part1" />
+                                        </p>
                                     </div>
                                     <div className="col-md-2">
                                         <p className="actor-part1">Name:</p>
                                     </div>
                                     <div className="col-md-10">
                                         <p><input type="text" name id className="input-part1" /> Lorem ipsum sit amet
-                    <span className="voca-part1">admin</span>, adipisicing elit.
-                                            Dolores atque maxime
-                    voluptate</p>
-                                    </div>
-                                    <div className="col-md-2">
-                                        <p className="actor-part1">Name:</p>
-                                    </div>
-                                    <div className="col-md-10">
-                                        <p>Lorem ipsum sit amet <span className="voca-part1">admin</span>, adipisicing
-                                          elit.
-                    Dolores atque maxime<input type="text" name id className="input-part1" />
-                                            voluptate</p>
-                                    </div>
-                                    <div className="col-md-2">
-                                        <p className="actor-part1">Name:</p>
-                                    </div>
-                                    <div className="col-md-10">
-                                        <p>Lorem ipsum sit amet orem ipsum sit ametorem ipsum sit ametorem ipsum sit
-                    ametorem ipsum sit ametorem ipsum sit amet <input type="text" name id className="input-part1" />,
-                                            adipisicing elit.
-                                            Dolores atque maxime
-                    voluptate</p>
-                                    </div>
-                                    <div className="col-md-2">
-                                        <p className="actor-part1">Name:</p>
-                                    </div>
-                                    <div className="col-md-10">
-                                        <p>Lorem ipsum sit amet <span className="voca-part1">admin</span>, adipisicing
-                                          elit.
-                                          Dolores atque maxime
-                    voluptate <input type="text" name id className="input-part1" /></p>
-                                    </div>
-                                    <div className="col-md-2">
-                                        <p className="actor-part1">Name:</p>
-                                    </div>
-                                    <div className="col-md-10">
-                                        <p><input type="text" name id className="input-part1" /> Lorem ipsum sit amet
-                    <span className="voca-part1">admin</span>, adipisicing elit.
-                                            Dolores atque maxime
-                    voluptate</p>
-                                    </div>
-                                    <div className="col-md-2">
-                                        <p className="actor-part1">Name:</p>
-                                    </div>
-                                    <div className="col-md-10">
-                                        <p>Lorem ipsum sit amet <span className="voca-part1">admin</span>, adipisicing
-                                          elit.
-                    Dolores atque maxime<input type="text" name id className="input-part1" />
-                                            voluptate</p>
-                                    </div>
+                                                span className="voca-part1">admin</span>, adipisicing elit.
+                                    Dolores atque maxime
+            voluptate
+                                        </p>
+                                </div>
+                                <div className="col-md-2">
+                                    <p className="actor-part1">Name:</p>
+                                </div>
+                                <div className="col-md-10">
+                                    <p>Lorem ipsum sit amet <span className="voca-part1">admin</span>, adipisicing
+                                      elit.
+                                            Dolores atque maxime<input type="text" name id className="input-part1" />
+                                        voluptate
+                                        </p>
+                                </div>
+                                <div className="col-md-2">
+                                    <p className="actor-part1">Name:</p>
+                                </div>
+                                <div className="col-md-10">
+                                    <p>Lorem ipsum sit amet orem ipsum sit ametorem ipsum sit ametorem ipsum sit
+                                            ametorem ipsum sit ametorem ipsum sit amet <input type="text" name id className="input-part1" />,
+                                                    adipisicing elit.
+                                                    Dolores atque maxime
+                            voluptate
+                                        </p>
+                                </div>
+                                <div className="col-md-2">
+                                    <p className="actor-part1">Name:</p>
+                                </div>
+                                <div className="col-md-10">
+                                    <p>Lorem ipsum sit amet <span className="voca-part1">admin</span>, adipisicing
+                                      elit.
+                                      Dolores atque maxime
+                                            voluptate <input type="text" name id className="input-part1" />
+                                    </p>
+                                </div>
+                                <div className="col-md-2">
+                                    <p className="actor-part1">Name:</p>
+                                </div>
+                                <div className="col-md-10">
+                                    <p><input type="text" name id className="input-part1" /> Lorem ipsum sit amet
+                                            <span className="voca-part1">admin</span>, adipisicing elit.
+                                                    Dolores atque maxime
+                            voluptate
+                                        </p>
+                                </div>
+                                <div className="col-md-2">
+                                    <p className="actor-part1">Name:</p>
+                                </div>
+                                <div className="col-md-10">
+                                    <p>Lorem ipsum sit amet <span className="voca-part1">admin</span>, adipisicing
+                                      elit.
+                                            Dolores atque maxime<input type="text" name id className="input-part1" />
+                                        voluptate
+                                        </p>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
+            </div >
         );
     }
 }
