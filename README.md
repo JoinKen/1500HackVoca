@@ -1,53 +1,68 @@
-# 1500HackVoca
-- Project Thiết kế phần mềm hướng giáo dục. 
-- Java spring boot
-- Git: Source tree
-- MySQL
+This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-# Tài nguyên dự án: https://drive.google.com/drive/folders/1UvPoga3bvIU3vUcCg9zgUqzF0G8kbf3u?usp=sharing
+## Available Scripts
 
-# Link
+In the project directory, you can run:
 
-# Task
-****UI
-- my proccess: 
-  trên thanh proccess phần trăm: học được bao nhiêu % và 10 unit học
-- part 1: mỗi đục lỗ có 1 id và 1 value. ở đoạn cần điền thì có số textbox tương ứng => Thuật toán kiểm tra: kiểm tra id bên đoạn văn trùng với danh sách từ vựng bên trái.
-khi nhập dữ liệu vào textbox thứ n trong đoạn văn -> dựa vào từ vừa nhập để lấy ID bên sách hiển thị nếu id=n thì đúng.
-- part 2: các màu thể hiện loại từ sẽ được fixed, phân trang mỗi trang hiển thị 8 từ, phân trang gồm pre and next, button chuyển phần tiếp theo nằm ở trang cuối cùng
-- gộp home + proccessing = my proccess; thay messeage thành my topic
-- part 3: button proccess chuyển tới trang proccess sau khi hoàn thành part 3
+### `npm start`
 
+Runs the app in the development mode.<br>
+Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
-****UX
-- part 3: khi hoàn thành thông báo topic được lưu ở đâu
-- part3: Khi ngta đã dùng từ vựng cho topic của mình thì từ vựng mất đi
+The page will reload if you make edits.<br>
+You will also see any lint errors in the console.
 
+### `npm test`
 
-****Backend
-- indexOf(String st) duyệt phần tử tồn tại trong chuỗi
+Launches the test runner in the interactive watch mode.<br>
+See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
+### `npm run build`
 
-****CSDL
-- tạo các HQTCSDL(storeproceduce, function, view,...)
-- image: Mysql và audio: project source
+Builds the app for production to the `build` folder.<br>
+It correctly bundles React in production mode and optimizes the build for the best performance.
 
-# Error
+The build is minified and the filenames include the hashes.<br>
+Your app is ready to be deployed!
 
-# Complete
+See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
-# Luồng chạy Web: 
-  Index page: giới thiệu phương pháp hay và hướng dẫn sử dụng --> GET STANDARD Click //\\ 
+### `npm run eject`
 
-  GET STANDARD btn: Create an Account an log in(only one page) --> Process:  //\\
+**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
 
-  Process page: 50 UNIT (tick 2 bước đọc hướng dẫn và account) ...--> UNIT 1( hoặc n) //\\
+If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
 
-  UNIT <#>: 
-  Part 1_Listen and absorb //\\
-    
-  Part_1_Practice //\\
-    
-  Part_2_Learn vocabulary through images and interpret similar sounds //\\
-    
-  Part_3_Practice Application exercises(have example in UNIT 1) //\\
+Instead, it will copy all the configuration files and the transitive dependencies (Webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+
+You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+
+## Learn More
+
+You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+
+To learn React, check out the [React documentation](https://reactjs.org/).
+
+### Code Splitting
+
+This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
+
+### Analyzing the Bundle Size
+
+This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
+
+### Making a Progressive Web App
+
+This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
+
+### Advanced Configuration
+
+This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
+
+### Deployment
+
+This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
+
+### `npm run build` fails to minify
+
+This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify

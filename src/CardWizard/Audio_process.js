@@ -1,9 +1,13 @@
 import React, { Component } from 'react';
 
 class Audio_process extends Component {
+
     render() {
+
         return (
+
             <div>
+                <script src="../index/musicplay.js" > </script>
                 <div className="wizard-header">
                     <div className="col-lg-5 col-md-5 col-xs-5 col-sm-5">
                         <h4> Chủ đề 1: Thói quen</h4>
@@ -43,12 +47,13 @@ class Audio_process extends Component {
                                     </div>
                                 </div>
                                 <audio crossOrigin>
-                                    <source src="./index/chuyenchem/Chuyenchem01.mp3" type="audio/mpeg" />
+                                    <source src="../index/chuyenchem/chuyenchem01.mpeg" type="audio/mpeg" />
                                 </audio>
                             </div>
                         </div>
                     </div>
                 </div>
+                <script src="../index/musicplay.js" > </script>
             </div>
         );
     }
