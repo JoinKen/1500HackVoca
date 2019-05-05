@@ -1,14 +1,11 @@
 import React, { Component } from 'react';
+import ListVocabolary from '../Part2/ListVocabolary';
 
 class AudioProcess extends Component {
     render() {
         return (
             <div>
-
-                <div className="container">
-                    <div className="row task_two">
-                    </div>
-                </div>
+                <ListVocabolary />
             </div>
         );
     }

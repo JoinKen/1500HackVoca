@@ -10,44 +10,38 @@ class CardWizard extends Component {
     render() {
         return (
             <div>
-                <div className="container">
-                    <div className="row">
-                        <div className="col-sm-12 ">
-                            {/*Wizard container*/}
-                            <div className="wizard-container">
-                                <div className="card wizard-card" data-color="green" id="wizardProfile">
-                                    <form action="true" method="true" noValidate="novalidate">
+                {/*Wizard container*/}
+                <div className="wizard-container">
+                    <div className="card wizard-card" data-color="green" id="wizardProfile">
+                        <form action="true" method="true" noValidate="novalidate">
 
-                                        <AudioProcess />
+                            <AudioProcess />
 
-                                        <div className="wizard-navigation">
-                                            <CardWizardNav />
-                                        </div>
-
-
-                                        <div className="tab-content">
-                                            <div className="tab-pane active" id="about">
-                                                <ContentPart1 />
-                                            </div>
-                                            <div className="tab-pane" id="account">
-                                                <ContentPart2 />
-                                            </div>
-                                            <div className="tab-pane" id="address">
-                                                <ContentPart3 />
-                                            </div>
-
-                                        </div>
-                                        <div className="wizard-footer">
-                                            <CardWizardFooter />
-                                        </div>
-
-                                    </form>
-                                </div>
+                            <div className="wizard-navigation">
+                                <CardWizardNav />
                             </div>
-                            {/* wizard container */}
-                        </div>
+
+
+                            <div className="tab-content">
+                                <div className="tab-pane active" id="about">
+                                    <ContentPart1 />
+                                </div>
+                                <div className="tab-pane" id="account">
+                                    <ContentPart2 />
+                                </div>
+                                <div className="tab-pane" id="address">
+                                    <ContentPart3 />
+                                </div>
+
+                            </div>
+                            <div className="wizard-footer">
+                                <CardWizardFooter />
+                            </div>
+
+                        </form>
                     </div>
                 </div>
+                {/* wizard container */}
             </div>
         );
     }

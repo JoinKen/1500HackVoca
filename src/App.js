@@ -3,7 +3,8 @@ import React, { Component } from 'react';
 import './App.css';
 import Header from '../src/AllLoad/Header';
 import Footer from '../src/AllLoad/Footer';
-import CartWizard from './CardWizard/CardWizard';
+import MainContainer from '../src/main/MainContainer';
+
 import "../src/App";
 
 class App extends Component {
@@ -13,7 +14,9 @@ class App extends Component {
       <div>
         <div className="App">
           <Header />
-          <CartWizard />>
+
+          <MainContainer />
+
           <Footer />
         </div>
       </div>
