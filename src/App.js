@@ -3,7 +3,7 @@ import React, { Component } from 'react';
 import './App.css';
 import Header from '../src/AllLoad/Header';
 import Footer from '../src/AllLoad/Footer';
-import Cart_wizard from './CardWizard/Card_wizard';
+import CartWizard from './CardWizard/CardWizard';
 import "../src/App";
 
 class App extends Component {
@@ -13,10 +13,9 @@ class App extends Component {
       <div>
         <div className="App">
           <Header />
-          <Cart_wizard />
+          <CartWizard />>
           <Footer />
         </div>
-
       </div>
     );
   }
