@@ -19,9 +19,9 @@ class Header extends Component {
                                         <span className="icon-bar" />
                                         <span className="icon-bar" />
                                     </button>
-                                    <a className="navbar-brand navbar-brand-logo" href="#">
+                                    <a className="navbar-brand navbar-brand-logo" href="true">
                                         <div className="logo hiddenScroll" style={{ visibility: 'visible' }}>
-                                            <img src="https://s3.amazonaws.com/creativetim_bucket/new_logo.png" />
+                                            <img src="https://s3.amazonaws.com/creativetim_bucket/new_logo.png" alt="true" />
                                         </div>
                                         <div className="brand"> Creative Tim </div>
                                         <div className="ripple-container" /></a>
@@ -36,7 +36,7 @@ class Header extends Component {
                                             </a>
                                         </li>
                                         <li>
-                                            <a href="#">
+                                            <a href="true">
                                                 <i className="pe-7s-mail">
                                                     <span className="label">23</span>
                                                 </i>
@@ -44,7 +44,7 @@ class Header extends Component {
                                             </a>
                                         </li>
                                         <li className="dropdown">
-                                            <a href="#" className="dropdown-toggle" data-toggle="dropdown">
+                                            <a href="true" className="dropdown-toggle" data-toggle="dropdown">
                                                 <i className="pe-7s-user" />
                                                 {/* <p class="hiddenScroll">Account */}
                                                 <b className="caret" />
@@ -52,23 +52,23 @@ class Header extends Component {
                                             </a>
                                             <ul className="dropdown-menu">
                                                 <li>
-                                                    <a href="#">Action</a>
+                                                    <a href="true">Action</a>
                                                 </li>
                                                 <li>
-                                                    <a href="#">Another action</a>
+                                                    <a href="true">Another action</a>
                                                 </li>
                                                 <li>
-                                                    <a href="#">Something</a>
+                                                    <a href="true">Something</a>
                                                 </li>
                                                 <li>
-                                                    <a href="#">Another action</a>
+                                                    <a href="true">Another action</a>
                                                 </li>
                                                 <li>
-                                                    <a href="#">Something</a>
+                                                    <a href="true">Something</a>
                                                 </li>
                                                 <li className="divider" />
                                                 <li>
-                                                    <a href="#">Separated link</a>
+                                                    <a href="true">Separated link</a>
                                                 </li>
                                             </ul>
                                         </li>
@@ -89,10 +89,10 @@ class Header extends Component {
                             </div>
                             <div className="btn_navigation" style={{ paddingLeft: '85px' }}>
                                 <ul className="col-lg-12 col-xs-12 col-md-12 col-sm-12 pull-center">
-                                    <li><button class="navagation btn btn-success voca-style">MY PROCESS</button></li>
-                                    <li><button class="navagation btn btn-danger voca-style">MY VOCABOLARY</button></li>
-                                    <li><button class="navagation btn btn-primary voca-style">MY TOPIC</button></li>
-                                    <li><button class="navagation btn btn-secondary voca-style">ABOUT US</button></li>
+                                    <li><button className="navagation btn btn-success voca-style">MY PROCESS</button></li>
+                                    <li><button className="navagation btn btn-danger voca-style">MY VOCABOLARY</button></li>
+                                    <li><button className="navagation btn btn-primary voca-style">MY TOPIC</button></li>
+                                    <li><button className="navagation btn btn-secondary voca-style">ABOUT US</button></li>
                                 </ul>
                             </div>
                         </div>
