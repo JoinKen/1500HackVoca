@@ -1,7 +1,10 @@
 import React, { Component } from 'react';
+
 import UnitLearn from '../Part1/Content/UnitLearn';
 import PracticeLearn from '../Part1/Content/PracticeLearn';
-class AudioProcess extends Component {
+class ContentPart1 extends Component {
+
+
     render() {
         return (
             <div>
@@ -22,6 +25,7 @@ class AudioProcess extends Component {
             </div>
         );
     }
+
 }
 
-export default AudioProcess;
+export default ContentPart1;

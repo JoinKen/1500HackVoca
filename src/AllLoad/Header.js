@@ -23,7 +23,7 @@ class Header extends Component {
                                         <div className="logo hiddenScroll" style={{ visibility: 'visible' }}>
                                             <img src="https://s3.amazonaws.com/creativetim_bucket/new_logo.png" alt="true" />
                                         </div>
-                                        <div className="brand"> Creative Tim </div>
+                                        <div className="brand"> My Team React dev </div>
                                         <div className="ripple-container" /></a>
                                 </div>
                                 {/* Collect the nav links, forms, and other content for toggling */}

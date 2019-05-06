@@ -1,0 +1,60 @@
+#wrapper-skins.dark{}
+
+a:link, a:visited{
+color:#555;
+text-decoration:none;
+}
+
+#wrapper-skins.dark .wrapper-content{
+background-color:#000;
+}
+
+#wrapper-skins.dark .wrapper-header{
+background-color:#222;
+border-bottom:1px solid #333;
+}
+
+#wrapper-skins.dark .wrapper-content_banner{
+color:#999999;
+}
+
+#wrapper-skin.dark .wrapper-content_notification{
+background-color:#555; 
+}
+
+#wrapper-skins.dark .header-left a.button_nav,
+#wrapper-skins.dark .header-right a.button_nav{
+color: #fff;
+}
+
+#wrapper-skins.dark .header-left a.button_nav:hover,
+#wrapper-skins.dark .header-left a.button_nav.active,
+#wrapper-skins.dark .header-right a.button_nav:hover,
+#wrapper-skins.dark .header-right a.button_nav.active {
+background:#333;
+color: #f80;
+}
+
+#wrapper-skins.dark .content_bundle .bundle_manager,
+#wrapper-skins.dark .content_bundle .bundle_functions{
+background-color:#f5f5f5;
+}
+
+#wrapper-skins.dark .documents_node .document_content{
+background-color:#ddd;
+}
+
+#wrapper-skins.dark .documents_list .documents_node{
+background-color:#f5f5f5;
+}
+
+#wrapper-skins.dark .wrapper-header .mn_panel{
+background-color: #222;
+border-left-color: #000;
+border-bottom-color: #000;
+}
+
+#wrapper-skins.dark .mn_panel .button_nav{
+color: #f80;
+background-color: rgb(212, 212, 212);
+}
