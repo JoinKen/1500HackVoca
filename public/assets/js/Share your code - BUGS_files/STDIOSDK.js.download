@@ -1,0 +1,457 @@
+String.prototype.replaceAll = function (search, replacement) {
+    var target = this;
+    return target.replace(new RegExp(search, 'g'), replacement);
+}
+
+var IO = {
+    KEYS : {
+        BACKSPACE: 8,
+        TAB: 9,
+        RETURN: 13,
+        SHIFT: 16,
+        CAPS_LOCK : 20,
+        ESCAPE : 27,
+        END: 35,
+        HOME: 36,
+        LEFT_ARROW : 37,
+        UP_ARROW : 38,
+        RIGHT_ARROW : 39,
+        DOWN_ARROW : 40,
+        DELETE : 46,
+        CHAR_0 : 48,
+        CHAR_1 : 49,
+        CHAR_9: 57
+    },
+
+    DIRECTIONS : {
+        TOP : 0,
+        RIGHT : 1,
+        BOTTOM : 2,
+        LEFT : 3
+    },
+
+    CHAR : {
+        EMPTY : '',
+        SPACE : ' ',
+    },
+
+    URL : {
+        DOMAIN : 'www.stdio.vn',
+        PROTOCOL: window.location.protocol,
+        HOST: window.location.hostname,
+        PATH: window.location.pathname,
+        HOME: window.location.protocol + '//' + window.location.hostname,
+        FULL: window.location.protocol + '//' + window.location.hostname + window.location.pathname,
+
+        SCOPES : {
+            CASES : {INSIDE:0, FAMILY:1, OUTSIZE:2},
+            DOMAINS: ['bugs.vn', 'stdio.vn', 'training.stdio.vn'],
+
+            Get : function(url) {
+                
+                var loc = IO.URL.GetLocation(url);
+
+                if (loc.hostname == IO.URL.HOST)
+                    return IO.URL.SCOPES.INSIDE;
+                else {
+                    var domain2rd = UI.URL.GetDomain2rd(loc.hostname);
+                    if (IO.URL.DOMAINS.indexOf(domain2rd) != -1)
+                        return this.SCOPES.CASES.FAMILY;
+                    else
+                        return this.SCOPES.CASES.OUTSIDE;
+                }
+            }
+        },
+
+        GetLocation : function(href)
+        {
+            var a = document.createElement("a");
+            a.href = href;
+            return a;
+        },
+
+        GetDomain2rd: function (domain) {
+            var domain_2rd = /(\w*\.\w*){1}\/?$/;
+            var match = domain_2rd.exec(domain);
+            return match[1];
+        }
+    },
+
+    redirect: function (url, confirmation) {
+        window.location = url;
+    },
+
+    replace: function (url) {
+        window.location.replace(url);
+    },
+
+    number_format: function(number, thousands_sep)
+    {
+        if (typeof thousands_sep !== 'undefined')
+            return number.toString().replace(/\B(?=(\d{3})+(?!\d))/g, thousands_sep);
+
+        return number.toString().replace(/\B(?=(\d{3})+(?!\d))/g, '.');
+        // return new Intl.NumberFormat().format(number);
+    },
+
+    numeric: function (event) {
+        event = event || window.event;
+        var charCode = (event.which) ? event.which : event.keyCode;
+
+        if ((charCode >= this.KEY_NUM_0 && charCode <= this.KEY_NUM_9) ||
+            charCode == this.KEY_BACKSPACE ||
+            charCode == this.KEY_TAB ||
+            charCode == this.KEY_SHIFT ||
+            charCode == this.KEY_END ||
+            charCode == this.KEY_HOME ||
+            charCode == this.KEY_LEFT ||
+            charCode == this.KEY_UP ||
+            charCode == this.KEY_RIGHT ||
+            charCode == this.KEY_DOWN ||
+            charCode == this.KEY_DELETE)
+        {
+            return true;
+        }
+        else
+        {
+            event.preventDefault();        
+            return false;
+        }
+    },
+
+    build_element: function (message, className, tag, id) {
+        var tag = typeof speed !== 'undefined' ? tag : 'div'; // default parameter
+        var id = typeof id !== 'undefined' ? id : null; // default parameter
+
+        return '<' + tag + ' class="' + className + '"' + (id != null ? ' id="' + id + '"' : this.CHAR_EMPTY) + '>' + message + '</' + tag + '>';
+    },
+
+    enable_click: function (element, enable) {
+        if (enable == true) {
+            $('#' + element).css('pointer-events', 'auto');
+            $('#' + element).css('background-color', STDIO.CHAR_EMPTY);
+            $('#' + element).css('opacity', '1.0');
+        } else {
+            $('#' + element).css('pointer-events', 'none');
+            $('#' + element).css('background-color', '#000');
+            $('#' + element).css('opacity', '0.1');
+        }
+    },
+
+    ScrollTo: function (command, speed) {
+
+        if (IO.COMPONENTS.STORAGE.GetItem("STDIO_IS_SCROLLING") != null)
+            return;
+
+        IO.COMPONENTS.STORAGE.SetItem("STDIO_IS_SCROLLING", IO.CHAR.EMPTY);
+
+        var speed = typeof speed !== 'undefined' ? speed : 1000; // default parameter
+
+        if (command === IO.DIRECTIONS.TOP) {
+
+            $('html,body').animate({
+                scrollTop: 0
+            }, speed, function () {
+                IO.COMPONENTS.STORAGE.RemoveItem("STDIO_IS_SCROLLING");
+            });
+
+            return;
+        }
+
+        var tag_name = command;
+
+        $('html, body').stop().animate({
+            'scrollTop': $('#' + tag_name).offset().top
+        }, speed,
+            function () {
+                IO.COMPONENTS.STORAGE.RemoveItem("STDIO_IS_SCROLLING");
+            }
+        );
+    },
+
+    
+
+    is_empty: function (obj) {
+        for (var prop in obj) {
+            if (obj.hasOwnProperty(prop))
+                return false;
+        }
+        return true;
+    },
+
+    br2nl: function (str) {
+        return str.replace(/<br\s*[\/]?>/gi, '\n');
+    },
+
+    nl2br: function (str) {
+        return str.replace(/(?:\r\n|\r|\n)/g, '<br/>');
+    },
+
+    splash2verticle: function (str) {
+        return str.replace(/\//g, '|');
+    },
+
+    verticle2splash: function (str) {
+        return str.replace(/|/g, '/');
+    },
+
+    tilde2slash: function (str) {
+        return str.replace(/~/g, '/');
+    },
+
+    double_encodeURIComponent: function (str) {
+        return encodeURIComponent(encodeURIComponent(str));
+    },
+
+    double_decodeURIComponent: function (str) {
+        return decodeURIComponent(decodeURIComponent(str));
+    },
+
+    U2A: function (str) {
+        if (!str) return STDIO.CHAR_EMPTY;
+
+        str = str.toLowerCase();
+
+        str = str.replace(/á|à|ả|ã|ạ|ă|ắ|ằ|ẳ|ẵ|ặ|â|ấ|ầ|ẩ|ẫ|ậ/g, "a");
+        str = str.replace(/Á|À|Ả|Ã|Ạ|Ă|Ắ|Ằ|Ẳ|Ẵ|Ặ|Â|Ấ|Ầ|Ẩ|Ẫ|Ậ/g, "A");
+        str = str.replace(/đ/g, "d");
+        str = str.replace(/Đ/g, "D");
+        str = str.replace(/é|è|ẻ|ẽ|ẹ|ê|ế|ề|ể|ễ|ệ/g, "e");
+        str = str.replace(/É|È|Ẻ|Ẽ|Ẹ|Ê|Ế|Ề|Ể|Ễ|Ệ/g, "E");
+        str = str.replace(/í|ì|ỉ|ĩ|ị/g, "i");
+        str = str.replace(/Í|Ì|Ỉ|Ĩ|Ị/g, "I");
+        str = str.replace(/ó|ò|ỏ|õ|ọ|ô|ố|ồ|ổ|ỗ|ộ|ơ|ớ|ờ|ở|ỡ|ợ/g, "o");
+        str = str.replace(/Ó|Ò|Ỏ|Õ|Ọ|Ô|Ố|Ồ|Ổ|Ỗ|Ộ|Ơ|Ớ|Ờ|Ở|Ỡ|Ợ/g, "O");
+        str = str.replace(/ú|ù|ủ|ũ|ụ|ư|ứ|ừ|ử|ữ|ự/g, "u");
+        str = str.replace(/Ú|Ù|Ủ|Ũ|Ụ|Ư|Ứ|Ừ|Ử|Ữ|Ự/g, "U");
+        str = str.replace(/ý|ỳ|ỷ|ỹ|ỵ/g, "y");
+        str = str.replace(/Ý|Ỳ|Ỷ|Ỹ|Ỵ/g, "Y");
+
+        return str;
+    },
+
+    is_function: function (f) {
+
+        obj = f.split('.');
+
+        var context = window;
+        for (i = 0; i < obj.length; i++) {
+            if (typeof context[obj[i]] == 'undefined')
+                return false;
+            context = context[obj[i]];
+        }
+
+        return typeof context === 'function';
+    },
+
+    prevent_hash_default_behavior: function () {
+        $(function () {
+            $('a[href^="#"]').on('click', function (e) {
+                console.log(this.hash);
+                e.preventDefault();
+                var hash_target = this.hash,
+                    target = $(hash_target);
+                $('html, body').stop().animate({
+                    'scrollTop': target.offset().top
+                }, 500, 'swing', function () {
+                    window.location.hash = hash_target;
+                });
+            });
+        });
+    },
+
+    scroll_horizontal : function (id, parent_id, r_InitFunc, r_miniFunc, r_maxiFunc) {
+
+        var TOP_R_Init = jQuery.isFunction(r_InitFunc) ? r_InitFunc() : r_InitFunc;
+        $('#' + id).css({ top: TOP_R_Init + 'px' });
+
+        IO.COMPONENTS.STORAGE.SetItem('sh_r_Init_' + id, jQuery.isFunction(r_InitFunc) ? IO.CHAR.EMPTY : r_InitFunc);
+        IO.COMPONENTS.STORAGE.SetItem('sh_r_mini_' + id, jQuery.isFunction(r_miniFunc) ? IO.CHAR.EMPTY : r_miniFunc);
+        IO.COMPONENTS.STORAGE.SetItem('sh_r_maxi_' + id, jQuery.isFunction(r_maxiFunc) ? IO.CHAR.EMPTY : r_maxiFunc);
+
+        $(window).scroll(function () {
+
+            r_InitFunc_v = IO.COMPONENTS.STORAGE.GetItem('sh_r_Init_' + id);
+            r_miniFunc_v = IO.COMPONENTS.STORAGE.GetItem('sh_r_mini_' + id);
+            r_maxiFunc_v = IO.COMPONENTS.STORAGE.GetItem('sh_r_maxi_' + id);
+
+            var TOP_ANCHOR = $('#' + parent_id).position().top;
+            var TOP_R_Init = jQuery.isFunction(r_InitFunc) ? r_InitFunc() : r_InitFunc_v;
+            var TOP_R_MINI = jQuery.isFunction(r_miniFunc) ? r_miniFunc() : r_miniFunc_v;
+            var TOP_R_MAXI = jQuery.isFunction(r_maxiFunc) ? r_maxiFunc() : r_maxiFunc_v;
+
+            if ($(window).scrollTop() < TOP_ANCHOR + TOP_R_MINI ||
+                $(window).scrollTop() > TOP_ANCHOR + TOP_R_MAXI) {
+                var r_top = $(window).scrollTop() - TOP_ANCHOR;
+                r_top = Math.max(r_top, TOP_R_MINI);
+                r_top = Math.min(r_top, TOP_R_MAXI);
+
+                $('#' + id).parent().css({ position: 'relative' });
+                $('#' + id).css({ position: 'absolute' });
+                $('#' + id).css({ top: r_top + 'px' });
+            }
+            else {
+                $('#' + id).css({ position: 'fixed' });
+                $('#' + id).css({ top: '0px' });
+                $('#' + id).css({ width: $('#' + parent_id)[0].clientWidth + 'px' });
+            }
+        });
+
+        $(window).scroll();
+    },
+
+    COMPONENTS : {
+
+        STORAGE : {
+
+            ID : 'id_fc3233e203d1d0731cd1bac4edc3a3f4',
+
+            Init : function () {
+                var node = $('<div/>').appendTo('body');
+                node.attr('id', this.ID);
+                node.attr('style', 'display:none');
+
+                node.html(JSON.stringify({}));
+            },
+
+            SetItem: function (key, value) {
+                var node = $('#' + this.ID);
+                var context = JSON.parse(node.html());
+
+                context[key] = escape(value);
+
+                node.html(JSON.stringify(context));
+            },
+
+            GetItem: function (key) {
+                var node = $('#' + this.ID);
+                var context = JSON.parse(node.html());
+
+                if (context[key] === undefined)
+                    return null;
+
+                return unescape(context[key]);
+            },
+
+            RemoveItem: function (key) {
+                var node = $('#' + this.ID);
+                var context = JSON.parse(node.html());
+
+                delete context[key];
+
+                node.html(JSON.stringify(context));
+            },
+
+            Clear: function () {
+                var node = $('#' + this.ID);
+
+                node.html(JSON.stringify({}));
+            }
+        },
+
+        BUTTONS : {
+
+            SCROLL2TOP : {
+                ID: 'id_8009d2af8ff122f4bffad6f8bc11cb3d',
+
+                Init: function () {
+                    var node = $('<div/>').appendTo('body');
+                    node.attr('id', this.ID);
+                    node.attr('class', 'BUTTONS_SCROLL2TOP');
+                    node.attr('onclick', 'IO.ScrollTo(IO.DIRECTIONS.TOP)');
+
+                    icon = "data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz48c3ZnIHZlcnNpb249IjEuMSIgaWQ9IkxheWVyXzEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHg9IjBweCIgeT0iMHB4IiB2aWV3Qm94PSIwIDAgMTAwMCAxMDAwIiBzdHlsZT0iZW5hYmxlLWJhY2tncm91bmQ6bmV3IDAgMCAxMDAwIDEwMDA7IiB4bWw6c3BhY2U9InByZXNlcnZlIj48c3R5bGUgdHlwZT0idGV4dC9jc3MiPi5zdDB7ZmlsbDojRkY4ODAwO308L3N0eWxlPjxnPjxwYXRoIGNsYXNzPSJzdDAiIGQ9Ik01MDAsMzUzTDUwMCwzNTNsNDI0LjcsNDI0LjZsNjUuMy02NS4zTDUzMi43LDI1NUw1MDAsMjIyLjRMNDY3LjMsMjU1TDEwLDcxMi4zbDY1LjMsNjUuM0w1MDAsMzUzeiIvPjwvZz48L3N2Zz4=";
+                    $('<img src="'+icon+'" />').appendTo(node);
+
+                    $(window).scroll(function () {
+                        if ($(window).scrollTop() >= 10) {
+                            $('#' + IO.COMPONENTS.BUTTONS.SCROLL2TOP.ID).show();
+                        } else {
+                            $('#' + IO.COMPONENTS.BUTTONS.SCROLL2TOP.ID).hide();
+                        }
+                    });
+                }
+            },
+
+			FBMESSENGER : {
+				ID: 'id_lVmploRZDLhza2R74N9HwL8MdUSiI4m6',
+				
+				Init: function (page_id, txt_msg) {
+					var node = $('<a/>').appendTo('body');
+					node.attr('id', this.ID);
+					node.attr('class', 'button-fbm');
+					node.attr('href', 'https://m.me/' + page_id);
+					node.attr('target', '_blank');
+
+                    var html = $('<div/>').appendTo(node);
+                    html.attr('class', 'fbm-slider');
+                    html.html(txt_msg);
+    
+                    icon = 'data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNDg1IiBoZWlnaHQ9IjI1MDAiIHZpZXdCb3g9Ijk2IDkzIDMyMiAzMjQiPjxwYXRoIGQ9Ik0yNTcgOTNjLTg4LjkxOCAwLTE2MSA2Ny4xNTctMTYxIDE1MCAwIDQ3LjIwNSAyMy40MTIgODkuMzExIDYwIDExNi44MDdWNDE3bDU0LjgxOS0zMC4yNzNDMjI1LjQ0OSAzOTAuODAxIDI0MC45NDggMzkzIDI1NyAzOTNjODguOTE4IDAgMTYxLTY3LjE1NyAxNjEtMTUwUzM0NS45MTggOTMgMjU3IDkzem0xNiAyMDJsLTQxLTQ0LTgwIDQ0IDg4LTk0IDQyIDQ0IDc5LTQ0LTg4IDk0eiIgZmlsbD0iIzAwODRmZiIvPjwvc3ZnPg==';
+
+                    $('<img src="'+icon+'" />').appendTo(node);
+				}
+			}
+			
+        },
+
+        LABELS : {
+            DEVELOPMENT : {
+                Init : function (text, url) {
+                    var node = $('<a/>').appendTo('body');
+                    node.attr('id', this.ID);
+                    node.attr('class', 'LABELS_DEVELOPMENT');
+                    node.attr('href', url);
+                    node.html(text);
+                }	
+            }
+        },
+
+        ICONS : {
+            LOADING : {
+
+                Init: function (icon) {
+                    IO.COMPONENTS.STORAGE.SetItem("IO_COMPONENTS_ICONS_LOADING_ICON", icon);
+                },
+
+                Add: function (parent_id, node_id) {
+                    var node = $('<div>', {
+                        id: node_id,
+                        class: 'ICONS_LOADING'
+                    }).appendTo('#' + parent_id);
+                    var span = $('<div>', {
+                        class: 'SPAN'
+                    }).html(IO.COMPONENTS.STORAGE.GetItem("IO_COMPONENTS_ICONS_LOADING_ICON"));
+                    node.append(span);
+                },
+
+                Remove: function (parent_id, id) {
+                    $('#' + parent_id + ' #' + id).remove();
+                },
+
+                Hide: function (parent_id, id) {
+                    $('#' + parent_id + ' #' + id).hide();
+                }
+            }
+        },
+
+        IMAGES : {
+            LAZY : {
+                Init : function () {
+                    $('img.IMAGES_LAZY').on('load', function () {
+                        $(this).fadeIn();
+                    }).on('error', function () {
+                        $(this).hide();
+                    }).each(function () {
+                        if (this.complete)
+                            $(this).fadeIn();
+                    });
+                },
+
+                refresh: function () {
+                    this.init();
+                }
+            }
+        }
+    }
+}
