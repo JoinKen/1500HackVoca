@@ -27,11 +27,11 @@ class itemContent extends Component {
         </div>
         <div className="col-md-10">
           <p>{ReactHtmlParser(this.onFix(this.props.keys))}</p>
-          <input type="text"
-            id={this.props.keys}
+          {/* <input type="text"
+          id={}
             className="input-part1"
             onChange={this.onHandleChangeFinal}
-            maxLength="16" />
+            maxLength="16" /> */}
         </div>
       </div>
     )
@@ -46,6 +46,7 @@ class itemContent extends Component {
 
   onHandleChangeFinal = (event) => {
     var target = event.target;
+    console.log("asdasdas");
     if (target.value != null) {
       //B1. So sanh chữ trong input có tồn tại ở trong list voca không
       //B2. Nếu tồn tại thì kiểm tra id của Voca đó có bằng id của input không 
