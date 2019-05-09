@@ -1,9 +1,12 @@
 import React, { Component } from 'react';
+import { Link } from 'react-router-dom';
+import UnitLearnNumber from './UnitLearnNumber';
 class Process extends Component {
 
     render() {
         return (
             <div>
+                <UnitLearnNumber />
                 <div className="container">
                     <div className="row">
                         <div className="col-md-12">
@@ -29,7 +32,7 @@ class Process extends Component {
                         </a>
                     </div> */}
                                 <div className="timeline">
-                                    <a href className="timeline-content">
+                                    <Link to="/" className="timeline-content">
                                         <div className="timeline-icon">
                                             <i className="fa fa-book" />
                                         </div>
@@ -40,10 +43,10 @@ class Process extends Component {
                                                 3 lần để
                                     tăng hiệu quả ghi nhớ</p>
                                         </div>
-                                    </a>
+                                    </Link>
                                 </div>
                                 <div className="timeline">
-                                    <a href className="timeline-content">
+                                    <Link to="/" className="timeline-content">
                                         <div className="timeline-icon">
                                             <i className="fa fa-briefcase" />
                                         </div>
@@ -54,10 +57,10 @@ class Process extends Component {
                                                 bạn cho là
                                     đúng với ngữ cảnh và ý nghĩa</p>
                                         </div>
-                                    </a>
+                                    </Link>
                                 </div>
                                 <div className="timeline">
-                                    <a href className="timeline-content">
+                                    <Link to="/" className="timeline-content">
                                         <div className="timeline-icon">
                                             <i className="fa fa-search" />
                                         </div>
@@ -68,10 +71,10 @@ class Process extends Component {
                                                 vựng
                                     trong não</p>
                                         </div>
-                                    </a>
+                                    </Link>
                                 </div>
                                 <div className="timeline">
-                                    <a href className="timeline-content">
+                                    <Link to="/" className="timeline-content">
                                         <div className="timeline-icon">
                                             <i className="fa fa-pencil" />
                                         </div>
@@ -82,7 +85,7 @@ class Process extends Component {
                                                 lẽ là tốn
                                     công sức nhất nhưng lại cực kì quan trọng </p>
                                         </div>
-                                    </a>
+                                    </Link>
                                 </div>
                             </div>
                         </div>

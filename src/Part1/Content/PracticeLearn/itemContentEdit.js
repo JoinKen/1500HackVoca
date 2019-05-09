@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import ReactHtmlParser from 'react-html-parser';
+import $ from 'jquery';
 
 class itemContent extends Component {
 
@@ -11,22 +12,19 @@ class itemContent extends Component {
     };
   }
 
-  onFix = (key) => {
-    var html = this.props.info.contentenglish;
-    var replaceHtml = '<input type="text" id=' + key + ' className="input-part1" onChange={this.onHandleChangeFinal} maxLength="16" />'.toString();
-    // html = html.map(html[0] => {
-    //   return html[0].replace('123', replaceHtml);
-    // });
-    return html.replace('123', replaceHtml);
-  }
+  // onFix = (key) => {
+  //   var html = this.props.info.contentenglish;
+  //   var replaceHtml = '<input type="text" id=' + (key + 21) + ' className="input-part1" onChange={this.onHandleChangeFinal} maxLength="16" />'.toString();
+  //   return html.replace('123', replaceHtml);
+  // }
   render() {
     return (
       <div>
         <div className="col-md-2 actor-part1">
           <p>{this.props.info.name}</p>
         </div>
-        <div className="col-md-10">
-          <p>{ReactHtmlParser(this.onFix(this.props.keys))}</p>
+        <div className="col-md-10 xxxx">
+          {ReactHtmlParser(this.props.info.contentenglish)}
           {/* <input type="text"
           id={}
             className="input-part1"
