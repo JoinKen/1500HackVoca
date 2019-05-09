@@ -1,6 +1,5 @@
 import React, { Component } from 'react'
 import ReactHtmlParser from 'react-html-parser';
-import $ from 'jquery';
 
 class itemContent extends Component {
 

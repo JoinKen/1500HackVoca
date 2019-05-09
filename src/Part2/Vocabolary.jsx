@@ -86,7 +86,24 @@ class Vocabolary extends Component {
 
 
     }
+
+    handleTypeWord = (idtypeword) => {
+        if (idtypeword === 1) {
+            return "text-example1"
+        } else if (idtypeword === 2) {
+            return "text-example1"
+        } else if (idtypeword === 3) {
+            return "text-example3"
+        } else if (idtypeword === 4) {
+            return "text-example4"
+        } else {
+            return "text-example"
+        }
+
+    }
     render() {
+
+
         // var content = this.state.color.map((color,index) =>{
         // return <span // key={index} // style={this.setStyle()} //
         // className = "voca-part1-blue" > { this.props.info.meaning }</span >
@@ -111,7 +128,8 @@ class Vocabolary extends Component {
 
                         <div className="text-example">{ReactHtmlParser(this.props.info.additional)}
                         </div>
-                        <div className="example">
+
+                        <div className={this.handleTypeWord(this.props.info.idtypeword)}>
                             <div className="item-example">&gt; {this.props.info.example1}</div>
                             <div className="item-example">&gt; {this.props.info.example2}</div>
                         </div>
