@@ -828,6 +828,7 @@ a:hover, a:focus {
     max-width: 640px;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     font-size: 13px;
+    padding-top: 30%;
 }
 
 ul.ks-cboxtags {
