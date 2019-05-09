@@ -173,6 +173,7 @@ class practice extends Component {
                     {/* </div> */}
                   </div>
                 </div>
+                <ckeEditor/>
       </div>
     )
   }

@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { Link } from 'react-router-dom';
 
 class Header extends Component {
     render() {
@@ -89,8 +90,8 @@ class Header extends Component {
                             </div>
                             <div className="btn_navigation" style={{ paddingLeft: '85px' }}>
                                 <ul className="col-lg-12 col-xs-12 col-md-12 col-sm-12 pull-center">
-                                    <li><button className="navagation btn btn-success voca-style">MY PROCESS</button></li>
-                                    <li><button className="navagation btn btn-danger voca-style">MY VOCABOLARY</button></li>
+                                    <li><Link to="/Process"><button className="navagation btn btn-success voca-style">MY PROCESS</button></Link></li>
+                                    <li><Link to="/LoadList"><button className="navagation btn btn-danger voca-style">MY VOCABULARY</button></Link></li>
                                     <li><button className="navagation btn btn-primary voca-style">MY TOPIC</button></li>
                                     <li><button className="navagation btn btn-secondary voca-style">ABOUT US</button></li>
                                 </ul>

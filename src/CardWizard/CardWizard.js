@@ -26,10 +26,10 @@ class CardWizard extends Component {
                                 <div className="tab-pane active" id="about">
                                     <ContentPart1 />
                                 </div>
-                                <div className="tab-pane" id="account">
+                                <div className="tab-pane part2" id="account">
                                     <ContentPart2 />
                                 </div>
-                                <div className="tab-pane" id="address">
+                                <div className="tab-pane part3" id="address">
                                     <ContentPart3 />
                                 </div>
 
