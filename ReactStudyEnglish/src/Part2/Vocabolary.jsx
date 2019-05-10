@@ -101,6 +101,11 @@ class Vocabolary extends Component {
         }
 
     }
+    speak =() => {
+        console.log("speaking");
+        console.log(this.props.info.voca);
+        this.props.Audio(this.props.info.voca);
+    }
     render() {
 
 
@@ -141,6 +146,7 @@ class Vocabolary extends Component {
                             className="fa fa-minus-circle " /> Remove</button>
                         <button type="button" data-toggle="modal" data-target="#myModal"
                             className="fa fa-plus-circle addvoca col-md-6 bottom"> Add My Voca</button>
+                            <button type="button" onClick={this.speak} >Phát âm</button>
                     </div>
                     <div className="addPost">
                         <div className="modal" id="myModal">
@@ -272,6 +278,9 @@ const mapDispatchToProps = (dispatch, props) => {
             dispatch(actions.inserVocaAct(image, voca, spelling, idtypeword,
                 meaning, example1, example2, idunit, idpart1, contentsoundsame, idusers));
 
+        },
+        Audio:(voca) =>{
+            dispatch(actions.audioAct(voca));
         }
 
     }

@@ -111,7 +111,8 @@ a:focus, a:active, button:active, button:focus, button:hover, button::-moz-focus
   top: 40%;
   left: 15px;
   border-radius: 30px;
-  background-color: rgba(83, 252, 41, 0.856);
+  background-color: #B3DEFF;
+  /* background-color: rgba(83, 252, 41, 0.856); */
   border: 1px solid rgba(166, 255, 154, 0.255);
   color: #000000;
   cursor: pointer;
@@ -180,7 +181,8 @@ a:focus, a:active, button:active, button:focus, button:hover, button::-moz-focus
   top: 49%;
   left: 15px;
   border-radius: 30px;
-  background-color: rgba(255, 60, 60, 0.842);
+  background-color: #95DEAF;
+  /* background-color: rgba(255, 60, 60, 0.842); */
   border: 1px solid rgba(156, 156, 156, 0.222);
   color: #000000;
   cursor: pointer;
@@ -249,7 +251,8 @@ a:focus, a:active, button:active, button:focus, button:hover, button::-moz-focus
   top: 58%;
   left: 15px;
   border-radius: 30px;
-  background-color: rgba(248, 60, 255, 0.89);
+  background-color: #EEF5B1;
+  /* background-color: rgba(248, 60, 255, 0.89); */
   border: 1px solid rgba(138, 138, 138, 0.222);
   color: #000000;
   cursor: pointer;
@@ -318,7 +321,8 @@ a:focus, a:active, button:active, button:focus, button:hover, button::-moz-focus
   top: 67%;
   left: 15px;
   border-radius: 30px;
-  background-color: rgba(255, 252, 83, 0.87);
+  background-color: #FAB6AF ;
+  /* background-color: rgba(255, 252, 83, 0.87); */
   border: 1px solid rgba(136, 136, 136, 0.222);
   color: #000000;
   cursor: pointer;
@@ -478,7 +482,7 @@ h2.title {
 .wizard-card .picture {
   width: 106px;
   height: 106px;
-  background-color: #999999;
+  background-color: #AEE6F2;
   border: 4px solid #CCCCCC;
   color: #FFFFFF;
   border-radius: 50%;
@@ -1456,7 +1460,7 @@ select.form-control[multiple], .form-group.is-focused select.form-control[multip
 }
 
 .btn, .btn:hover, .btn:focus, .btn:active, .btn.active, .btn:active:focus, .btn:active:hover, .btn.active:focus, .btn.active:hover, .open>.btn.dropdown-toggle, .open>.btn.dropdown-toggle:focus, .open>.btn.dropdown-toggle:hover, .btn.btn-default, .btn.btn-default:hover, .btn.btn-default:focus, .btn.btn-default:active, .btn.btn-default.active, .btn.btn-default:active:focus, .btn.btn-default:active:hover, .btn.btn-default.active:focus, .btn.btn-default.active:hover, .open>.btn.btn-default.dropdown-toggle, .open>.btn.btn-default.dropdown-toggle:focus, .open>.btn.btn-default.dropdown-toggle:hover {
-  background-color: #999999;
+  background-color: #AEE6F2;
   color: #FFFFFF;
 }
 
@@ -1484,7 +1488,8 @@ select.form-control[multiple], .form-group.is-focused select.form-control[multip
 }
 
 .btn.btn-primary, .btn.btn-primary:hover, .btn.btn-primary:focus, .btn.btn-primary:active, .btn.btn-primary.active, .btn.btn-primary:active:focus, .btn.btn-primary:active:hover, .btn.btn-primary.active:focus, .btn.btn-primary.active:hover, .open>.btn.btn-primary.dropdown-toggle, .open>.btn.btn-primary.dropdown-toggle:focus, .open>.btn.btn-primary.dropdown-toggle:hover {
-  background-color: #9c27b0;
+  /* background-color: #9c27b0; */
+  background-color: #99D9F2 ;
   color: #FFFFFF;
 }
 
@@ -1540,7 +1545,8 @@ select.form-control[multiple], .form-group.is-focused select.form-control[multip
 }
 
 .btn.btn-success, .btn.btn-success:hover, .btn.btn-success:focus, .btn.btn-success:active, .btn.btn-success.active, .btn.btn-success:active:focus, .btn.btn-success:active:hover, .btn.btn-success.active:focus, .btn.btn-success.active:hover, .open>.btn.btn-success.dropdown-toggle, .open>.btn.btn-success.dropdown-toggle:focus, .open>.btn.btn-success.dropdown-toggle:hover {
-  background-color: #4caf50;
+  /* background-color: #4caf50; */
+  background-color: #F2A2B1;
   color: #FFFFFF;
 }
 
@@ -1596,7 +1602,8 @@ select.form-control[multiple], .form-group.is-focused select.form-control[multip
 }
 
 .btn.btn-danger, .btn.btn-danger:hover, .btn.btn-danger:focus, .btn.btn-danger:active, .btn.btn-danger.active, .btn.btn-danger:active:focus, .btn.btn-danger:active:hover, .btn.btn-danger.active:focus, .btn.btn-danger.active:hover, .open>.btn.btn-danger.dropdown-toggle, .open>.btn.btn-danger.dropdown-toggle:focus, .open>.btn.btn-danger.dropdown-toggle:hover {
-  background-color: #f44336;
+  /* background-color: #f44336; */
+  background-color: #F2BBC5;
   color: #FFFFFF;
 }
 
