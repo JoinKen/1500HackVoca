@@ -784,10 +784,10 @@ a:hover, a:focus {
 
 #accordion .panel-body {
     padding: 20px 15px;
-    background: #eee;
+    background: rgb(255, 255, 255);
     border: none;
     border-radius: 2px;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.5) inset, 0 1px 2px rgba(255, 255, 255, 0.9);
+    box-shadow: 0 2px 2px rgba(0, 0, 0, 0.5) inset, 0 1px 2px rgba(255, 255, 255, 0.9);
     font-size: 14px;
     color: #000000;
     line-height: 25px;
@@ -842,9 +842,9 @@ ul.ks-cboxtags li {
 
 ul.ks-cboxtags li label {
     display: inline-block;
-    background-color: rgba(255, 255, 255, .9);
-    border: 2px solid rgba(139, 139, 139, .3);
-    color: #adadad;
+    background-color: #5cd1ff;
+    border: 2px solid rgba(255, 111, 255, 0.527);
+    color: #000000;
     border-radius: 25px;
     white-space: nowrap;
     margin: 3px 0px;
@@ -880,12 +880,16 @@ ul.ks-cboxtags li input[type="checkbox"]:checked+label::before {
     content: "\f00c";
     transform: rotate(-360deg);
     transition: transform .3s ease-in-out;
+    -webkit-transition: transform .3s ease-in-out;
+    -moz-transition: transform .3s ease-in-out;
+    -ms-transition: transform .3s ease-in-out;
+    -o-transition: transform .3s ease-in-out;
 }
 
 ul.ks-cboxtags li input[type="checkbox"]:checked+label {
-    border: 2px solid #1bdbf8;
-    background-color: #12bbd4;
-    color: #fff;
+    border: 2px solid #dfdfdf;
+    background-color: #dddddd48;
+    color: rgb(124, 124, 124);
     transition: all .2s;
 }
 
@@ -1122,29 +1126,36 @@ ul.nav.nav-pills {
 }
 
 .social-share-wrap.text-left {
-    margin-right: 20px !important ;
+    margin-right: 20px !important;
     margin-bottom: 20px !important;
 }
+
 .social-share-wrap {
     width: 316px !important;
 }
+
 /* .tab-content .part2 {
     margin-left: 50px !important;
 } */
-.tab-content .part2 .social-share-wrap{
-    margin-left:10px !important;
+
+.tab-content .part2 .social-share-wrap {
+    margin-left: 10px !important;
 }
-.tab-content .part2  {
+
+.tab-content .part2 {
     margin-left: 50px;
 }
+
 .social-share-overlay {
     display: none;
 }
+
 .textMess {
     margin-top: 20px;
     width: 100%;
     height: 250px;
-  }
-  .tab-content .part3{
-      margin-left:36px;
-  }
+}
+
+.tab-content .part3 {
+    margin-left: 36px;
+}

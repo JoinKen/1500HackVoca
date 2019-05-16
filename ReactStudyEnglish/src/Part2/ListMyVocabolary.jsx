@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import Vocabolary from './Vocabolary';
+import MyVocabolary from './MyVocabolary';
 import { connect } from 'react-redux';
 import * as actions from '../Action/ActionVoca';
 
@@ -28,7 +28,7 @@ class ListVocabolary extends Component {
         if (this.state.isActive === true) {
             result = this.state.Vocas.map((item, index) => {
                 if (index < 3) {
-                    return <Vocabolary key={index} info={item} />
+                    return <MyVocabolary key={index} info={item} />
                 }
             })
 
@@ -44,7 +44,7 @@ class ListVocabolary extends Component {
         if (this.state.isActive === true) {
             result = this.state.Vocas.map((item, index) => {
                 if (index > 4 && index <= 7) {
-                    return <Vocabolary key={index} info={item} />
+                    return <MyVocabolary key={index} info={item} />
                 }
             })
 
@@ -61,7 +61,7 @@ class ListVocabolary extends Component {
         if (this.state.isActive === true) {
             result = this.state.Vocas.map((item, index) => {
                 if (index > 7 && index <= 10) {
-                    return <Vocabolary key={index} info={item} />
+                    return <MyVocabolary key={index} info={item} />
                 }
             })
 

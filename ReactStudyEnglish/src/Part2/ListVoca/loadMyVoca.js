@@ -1,11 +1,12 @@
 import React, { Component } from 'react';
-import ListVocabolary from '../ListVocabolary';
+import ListMyVocabolary from '../ListMyVocabolary';
 // import MyVocabulary from '../../Page/MyVocabulary';
 class loadVoca extends Component {
     render() {
         return (
             <div>
-                <ListVocabolary />
+                <ListMyVocabolary />
+
             </div>
         )
     }

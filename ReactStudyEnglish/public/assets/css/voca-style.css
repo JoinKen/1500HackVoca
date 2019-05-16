@@ -3,14 +3,27 @@
     font-size: 15px;
 }
 
+.checkpart3 {
+    padding: 2px !important;
+    height: 32px;
+}
+
+.btn-navigation {
+    color: #000 !important;
+}
+
+.btn-navigation:hover {
+    color: #fff !important;
+}
+
 .voca-part1 {
-    font-weight: 800;
-    color: red;
+    font-weight: 500;
+    color: rgb(214, 0, 0);
 }
 
 .voca-part1-blue {
-    font-weight: 800;
-    color: blue;
+    font-weight: 500;
+    color: rgb(58, 58, 255);
 }
 
 .actor-part1 {
@@ -83,11 +96,23 @@ input[type=search] {
 }
 
 .pull-left {
-    float: left
+    float: left;
+}
+
+.btn_next {
+    margin-right: 40px;
+}
+
+.btn_finish {
+    margin-right: 40px;
+}
+
+.btn_previous {
+    margin-left: 70px;
 }
 
 .pull-right {
-    float: right
+    float: right;
 }
 
 .clearfix:after, .clearfix:before {
@@ -106,7 +131,7 @@ input[type=search] {
 
 .social-share-wrap {
     width: 320px;
-    height: 480px;
+    height: 540px;
     overflow: hidden;
     background: #fff;
     margin: 5% auto 0;
@@ -140,6 +165,10 @@ input[type=search] {
 .social-share-wrap .content {
     padding: 10px;
     position: relative;
+}
+
+.social-share-wrap .content .title {
+    margin-top: 0px !important;
 }
 
 .social-share-wrap .content .title, .social-share-wrap .content .text, .social-share-wrap .content .price {
@@ -191,21 +220,24 @@ input[type=search] {
 
 .social-share-wrap .content .text-example {
     display: block;
-    line-height: 24px;
-    background: whitesmoke;
-    font-weight: 600;
+    line-height: 12px;
+    background: #ffffff;
+    font-weight: 300;
     border: solid 1p;
     border-radius: 5px;
-    padding-left: 5px;
     color: black;
     -webkit-transition-duration: .6s;
     transition-duration: .6s;
+}
+
+.text-voca {
+    color: black;
 }
 
 .social-share-wrap .content .text-example1 {
     display: block;
     line-height: 24px;
-    background: #86ff68;
+    background: #B3DDFF;
     font-weight: 600;
     border: solid 1p;
     border-radius: 5px;
@@ -215,23 +247,14 @@ input[type=search] {
     transition-duration: .6s;
 }
 
-.social-share-wrap .content .text-example2 {
-    display: block;
-    line-height: 24px;
-    background: #ff6868;
-    font-weight: 600;
-    border: solid 1p;
-    border-radius: 5px;
-    padding-left: 5px;
-    color: black;
-    -webkit-transition-duration: .6s;
-    transition-duration: .6s;
+.text-voca1 {
+    color: rgb(43, 160, 255);
 }
 
 .social-share-wrap .content .text-example3 {
     display: block;
     line-height: 24px;
-    background: #f973fd;
+    background: #95DEAF;
     font-weight: 600;
     border: solid 1p;
     border-radius: 5px;
@@ -239,12 +262,33 @@ input[type=search] {
     color: black;
     -webkit-transition-duration: .6s;
     transition-duration: .6s;
+}
+
+.text-voca3 {
+    color: rgb(29, 218, 95);
+}
+
+.social-share-wrap .content .text-example2 {
+    display: block;
+    line-height: 24px;
+    background: #EEF5B1;
+    font-weight: 600;
+    border: solid 1p;
+    border-radius: 5px;
+    padding-left: 5px;
+    color: black;
+    -webkit-transition-duration: .6s;
+    transition-duration: .6s;
+}
+
+.text-voca2 {
+    color: rgb(212, 231, 38);
 }
 
 .social-share-wrap .content .text-example4 {
     display: block;
     line-height: 24px;
-    background: #fffd8d;
+    background: #FAB6AF;
     font-weight: 600;
     border: solid 1p;
     border-radius: 5px;
@@ -254,10 +298,14 @@ input[type=search] {
     transition-duration: .6s;
 }
 
+.text-voca4 {
+    color: rgb(230, 76, 59);
+}
+
 .social-share-wrap .content .example .item-example {
     display: block;
     line-height: 24px;
-    font-size: 15px !important;
+    font-size: 16px !important;
     color: black;
     -webkit-transition-duration: .6s;
     transition-duration: .6s;
@@ -277,12 +325,12 @@ input[type=search] {
 }
 
 .social-share-wrap .addvoca {
-    border: solid 1px green;
+    border: solid 1px rgb(72, 255, 81);
     border-radius: 5px;
     padding: 5px !important;
     margin: 5px;
-    color: rgb(225, 0, 255);
-    background: rgb(147, 255, 133);
+    color: rgb(0, 0, 0);
+    background: rgb(55, 255, 28);
     align-content: stretch;
     position: static;
     text-decoration: none;
@@ -290,8 +338,20 @@ input[type=search] {
     transition: all .2s ease-in-out 0s;
 }
 
+.social-share-wrap .phatamvoca {
+    border: none;
+    border-radius: 5px;
+    padding: 5px;
+    margin-left: 35px;
+    font-size: 20px;
+    background: rgb(216, 255, 210);
+    align-content: stretch;
+    -webkit-transition: all .2s ease-in-out 0s;
+    transition: all .2s ease-in-out 0s;
+}
+
 .social-share-wrap .addvoca:hover {
-    background: rgba(60, 255, 34, 0.6);
+    background: rgb(255, 255, 255);
     box-shadow: 0 2px 3px 0 rgba(0, 0, 0, .21), 0 1px 2px 0 rgba(0, 0, 0, .22);
     color: green;
 }
