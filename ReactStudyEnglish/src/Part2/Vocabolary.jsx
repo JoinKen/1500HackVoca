@@ -135,14 +135,11 @@ class Vocabolary extends Component {
         }
 
     }
-
     speak = () => {
-
         console.log("speaking");
         console.log(this.props.info.voca);
         this.props.Audio(this.props.info.voca);
     }
-
     handleTypeWordVoca = (idtypeword) => {
         if (idtypeword === 1) {
             return "title col-lg-12 text-voca1"
@@ -156,6 +153,7 @@ class Vocabolary extends Component {
             return "title col-lg-12 text-voca"
         }
     }
+
     render() {
 
         return (

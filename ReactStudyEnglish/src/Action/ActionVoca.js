@@ -29,7 +29,6 @@ export const getListVocaAct = () => {
         })
     }
 }
-
 export const audioAct = (voca) => {
     console.log(voca);
     return (dispatch) => {
