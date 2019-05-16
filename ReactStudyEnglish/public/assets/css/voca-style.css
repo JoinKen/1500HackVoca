@@ -98,22 +98,21 @@ input[type=search] {
 .pull-left {
     float: left;
 }
-
-.btn_next {
-    margin-right: 40px;
+.btn_next{
+    margin-right:40px;
 }
-
-.btn_finish {
-    margin-right: 40px;
+.btn_finish{
+    margin-right:40px;
 }
-
-.btn_previous {
-    margin-left: 70px;
+.btn_previous{
+    margin-left:70px;
 }
 
 .pull-right {
     float: right;
 }
+
+
 
 .clearfix:after, .clearfix:before {
     content: '';
