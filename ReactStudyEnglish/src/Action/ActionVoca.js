@@ -29,23 +29,24 @@ export const getListVocaAct = () => {
         })
     }
 }
-export const audioAct =(voca) =>{
+
+export const audioAct = (voca) => {
     console.log(voca);
-    return (dispatch) =>{
-        return callApi("Audio","POST",{
+    return (dispatch) => {
+        return callApi("Audio", "POST", {
             voca
-        }).then(res =>{
+        }).then(res => {
             console.log(res);
             console.log("audio");
         })
     }
 }
-export const deleteVoca =(idVoca) =>{
+export const deleteVoca = (idVoca) => {
     console.log(idVoca);
-    return (dispatch) =>{
-        return callApi("DeleteMyVocabulary","POST",{
+    return (dispatch) => {
+        return callApi("DeleteMyVocabulary", "POST", {
             idVoca
-        }).then(res =>{
+        }).then(res => {
             console.log(res);
             console.log("deletesucess");
         })

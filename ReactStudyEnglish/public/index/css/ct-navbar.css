@@ -314,8 +314,8 @@ h1 .subtitle {
 }
 
 .navbar:not(.navbar-transparent).navbar-ct-blue {
-    background-color: #34ACDC;
-    background-color: rgba(52, 172, 220, 0.98);
+    background-color: rgb(255, 177, 232);
+    background-color: #f2bbc5;
 }
 
 .navbar:not(.navbar-transparent).navbar-ct-azzure {

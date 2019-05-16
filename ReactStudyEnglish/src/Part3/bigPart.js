@@ -3,6 +3,7 @@ import ContentVoca from '../Part3/contentVoca';
 import { connect } from 'react-redux';
 import * as actions from '../Action/ActionVoca';
 import CkeEditor from './ckeEditor';
+import ListVocaCheck from "../Part1/Content/PracticeLearn/ListVocaCheck";
 
 class bigPart extends Component {
     constructor(props) {
@@ -49,27 +50,27 @@ class bigPart extends Component {
                 <div className="tab-pane active" id="about">
                     <div className="container">
                         <div className="row">
-                            <div className="col-md-6" style={{ width: "90%" }}>
-                                <h1>
-                                    <span>
-                                        <i className="fas fa-book-open" />
-                                    </span>
-                                    Checkboxes that work goodly
-                                </h1>
+                            <h1>
+                                <span>
+                                    <i className="fas fa-book-open" />
+                                </span>
+                                Work goodly
+                            </h1>
+                            {/* <div className="col-md-2">
                                 <div
                                     id="collapseOne"
                                     className="panel-collapse collapse in"
                                     role="tabpanel"
                                     aria-labelledby="headingOne">
-
                                     <div className="check_text">
-                                        <section>
-                                            <div className="row">
-                                                {this.renderListVoca()}
-                                            </div>
-                                        </section>
+                                        {this.renderListVoca()}
                                     </div>
                                 </div>
+                            </div> */}
+                            <div className="container col-md-2 col-xs-2 col-sm-2 col-lg-2 ">
+                                <ListVocaCheck />
+                            </div>
+                            <div className="col-md-9">
                                 <CkeEditor />
                             </div>
                         </div>

@@ -20,7 +20,7 @@ class Header extends Component {
                                         <span className="icon-bar" />
                                         <span className="icon-bar" />
                                     </button>
-                                    <a className="navbar-brand navbar-brand-logo" href="true">
+                                    <a className="navbar-brand navbar-brand-logo" href="https://www.facebook.com/it10069001">
                                         <div className="logo hiddenScroll" style={{ visibility: 'visible' }}>
                                             <img src="https://s3.amazonaws.com/creativetim_bucket/new_logo.png" alt="true" />
                                         </div>
@@ -37,7 +37,7 @@ class Header extends Component {
                                             </a>
                                         </li>
                                         <li>
-                                            <a href="true">
+                                            <a href="https://www.facebook.com/it10069001">
                                                 <i className="pe-7s-mail">
                                                     <span className="label">23</span>
                                                 </i>
@@ -45,7 +45,7 @@ class Header extends Component {
                                             </a>
                                         </li>
                                         <li className="dropdown">
-                                            <a href="true" className="dropdown-toggle" data-toggle="dropdown">
+                                            <a href="https://www.facebook.com/it10069001" className="dropdown-toggle" data-toggle="dropdown">
                                                 <i className="pe-7s-user" />
                                                 {/* <p class="hiddenScroll">Account */}
                                                 <b className="caret" />
@@ -53,23 +53,23 @@ class Header extends Component {
                                             </a>
                                             <ul className="dropdown-menu">
                                                 <li>
-                                                    <a href="true">Action</a>
+                                                    <a href="https://www.facebook.com/it10069001">Action</a>
                                                 </li>
                                                 <li>
-                                                    <a href="true">Another action</a>
+                                                    <a href="https://www.facebook.com/it10069001">Another action</a>
                                                 </li>
                                                 <li>
-                                                    <a href="true">Something</a>
+                                                    <a href="https://www.facebook.com/it10069001">Something</a>
                                                 </li>
                                                 <li>
-                                                    <a href="true">Another action</a>
+                                                    <a href="https://www.facebook.com/it10069001">Another action</a>
                                                 </li>
                                                 <li>
-                                                    <a href="true">Something</a>
+                                                    <a href="https://www.facebook.com/it10069001">Something</a>
                                                 </li>
                                                 <li className="divider" />
                                                 <li>
-                                                    <a href="true">Separated link</a>
+                                                    <a href="https://www.facebook.com/it10069001">Separated link</a>
                                                 </li>
                                             </ul>
                                         </li>
@@ -90,10 +90,10 @@ class Header extends Component {
                             </div>
                             <div className="btn_navigation" style={{ paddingLeft: '85px' }}>
                                 <ul className="col-lg-12 col-xs-12 col-md-12 col-sm-12 pull-center">
-                                    <li><Link to="/Process"><button className="navagation btn btn-success voca-style">MY PROCESS</button></Link></li>
-                                    <li><Link to="/LoadList"><button className="navagation btn btn-danger voca-style">MY VOCABULARY</button></Link></li>
-                                    <li><button className="navagation btn btn-primary voca-style">MY TOPIC</button></li>
-                                    <li><button className="navagation btn btn-secondary voca-style">ABOUT US</button></li>
+                                    <li><Link to="/Process"><button className="navagation btn btn-success voca-style btn-navigation">MY PROCESS</button></Link></li>
+                                    <li><Link to="/LoadList"><button className="navagation btn btn-danger voca-style btn-navigation">MY VOCABULARY</button></Link></li>
+                                    <li><button className="navagation btn btn-primary voca-style btn-navigation">MY TOPIC</button></li>
+                                    <li><button className="navagation btn btn-secondary voca-style btn-navigation">ABOUT US</button></li>
                                 </ul>
                             </div>
                         </div>

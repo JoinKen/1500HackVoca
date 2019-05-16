@@ -50,49 +50,8 @@ class Vocabolary extends Component {
         })
     }
 
-    RenderVocaAdd = (voca) => {
-        return (
-            <div className="social-share-wrap text-left pull-center" >
-                <div className="cover">
-                    <img className="image" src={voca.image} />
-                </div>
-                <div className="content col-lg-12">
-                    <div className="col-lg-9"></div>
-                    <button type="button" onClick={this.speak} className="phatamvoca fa fa-volume-up"></button>
-                    <label className="label" htmlFor="toggle">{this.props.idvocabulary}</label>
-                    <div className={this.handleTypeWordVoca(voca.idtypeword)}>
-                        <b className="col-lg-6 ">{voca.voca}</b>
-                        <b className="col-lg-6">{'{'}{voca.spelling}{'}'}</b>
-                    </div>
-                    <div className="text">
-
-                        {ReactHtmlParser(voca.contentsoundsame)}
-
-                    </div>
-
-                    <div className="text-example">{ReactHtmlParser(voca.additional)}
-                    </div>
-
-                    <div className={this.handleTypeWord(voca.idtypeword)}>
-                        <div className="item-example">&gt; {voca.example1}</div>
-                        <div className="item-example">&gt; {voca.example2}</div>
-                    </div>
-                    <div className="price" />
-                </div>
-            </div>
-        );
-    }
-
-    handleOnSubmit(voca, event) {
-        event.preventDefault();
-        this.props.inserVocaAct(voca.image, voca.voca, voca.spelling, voca.idtypeword,
-            voca.meaning, voca.example1, voca.example2, voca.idunit, voca.idpart1,
-            voca.contentsoundsame, voca.idusers
-        )
-        console.log(event);
-    }
-    delete = () => {
-        this.props.deleteVoca(this.props.info.idvocabulary);
+    handleOnDelete(idvoca, event) {
+        this.props.deleteVoca(idvoca);
     }
     setStyle(color) {
         if (this.props.info.idtypeword === 2) {
@@ -135,14 +94,11 @@ class Vocabolary extends Component {
         }
 
     }
-
     speak = () => {
-
         console.log("speaking");
         console.log(this.props.info.voca);
         this.props.Audio(this.props.info.voca);
     }
-
     handleTypeWordVoca = (idtypeword) => {
         if (idtypeword === 1) {
             return "title col-lg-12 text-voca1"
@@ -156,6 +112,7 @@ class Vocabolary extends Component {
             return "title col-lg-12 text-voca"
         }
     }
+
     render() {
 
         return (
@@ -194,11 +151,11 @@ class Vocabolary extends Component {
                         <button type="button" onClick={(e) => this.handleOnSubmit(this.props.info, e)}
                             data-toggle="modal" data-target="#myModal"
                             className="fa fa-plus-circle addvoca col-md-6 bottom pull-right">Add My Voca</button> */}
-                        {/* <button type="button" onClick={this.delete} className="removevoca col-md-5 bottom"><i
-                            className="fa fa-minus-circle " /> Remove</button> */}
-                        <button type="button" onClick={(e) => this.handleOnSubmit(this.props.info, e)}
+                        <button type="button" onClick={(e) => this.handleOnDelete(this.props.info, e)} className="removevoca col-md-5 bottom"><i
+                            className="fa fa-minus-circle " data-toggle="modal" data-target="#myModal" /> Remove</button>
+                        {/* <button type="button" onClick={(e) => this.handleOnSubmit(this.props.info, e)}
                             data-toggle="modal" data-target="#myModal"
-                            className="fa fa-plus-circle addvoca col-md-6 bottom pull-right">Add My Voca</button>
+                            className="fa fa-plus-circle addvoca col-md-6 bottom pull-right">Add My Voca</button> */}
                         {/* <button type="button" data-toggle="modal" data-target="#myModal"
                 onClick={this.handleOnSubmit(this.props.info)}
                 className="fa fa-plus-circle addvoca col-md-6 bottom pull-right">Add My Voca</button> */}
@@ -207,12 +164,7 @@ class Vocabolary extends Component {
                         <div className="modal" id="myModal">
                             <div className="modal-dialog">
                                 <div className="modal-content">
-                                    <div className="modal-header">
-                                        <h4 className="modal-title"> Đã thêm vào Your VOCABOLARY </h4>
-                                    </div>
-                                    <div className="modal-body">
-                                        {this.RenderVocaAdd(this.props.info)}
-                                    </div>
+                                    <h4 className="modal-title"> Đã Xóa khỏi Your VOCABOLARY </h4>
                                     <div className="modal-footer">
                                         <button type="button" className="btn btn-danger" data-dismiss="modal">
                                             Close
